@@ -4,17 +4,16 @@
 
 <h1>Compliance as Code</h1>
 
-<p><strong>The Strategic Control Plane for Continuous Governance, Automated Evidence Orchestration, and Multi-Framework Regulatory Validation</strong></p>
+<p><strong>The Institutional-Grade Platform for Standardized Compliance Foundations, Policy Governance, and Multi-Cloud Assurance Ecosystems.</strong></p>
 
-[![Governance: Code--Driven](https://img.shields.io/badge/Governance-Code--Driven-blue.svg?style=for-the-badge&labelColor=000000)]()
-[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-indigo.svg?style=for-the-badge&labelColor=000000)]()
-[![Compliance: ISO--NIST--PCI](https://img.shields.io/badge/Compliance-ISO--NIST--PCI-green.svg?style=for-the-badge&labelColor=000000)]()
-[![Assurance: Continuous](https://img.shields.io/badge/Assurance-Continuous-ff69b4?style=for-the-badge&labelColor=000000)]()
+[![Standard: Compliance-Excellence](https://img.shields.io/badge/Standard-Compliance--Excellence-blue.svg?style=for-the-badge&labelColor=000000)]()
+[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-emerald.svg?style=for-the-badge&labelColor=000000)]()
+[![Focus: Secure--Policy--Orchestration](https://img.shields.io/badge/Focus-Secure--Policy--Orchestration-indigo.svg?style=for-the-badge&labelColor=000000)]()
 
 <br/>
 
-> **"If a control isn't codified, it doesn't exist."** 
-> Compliance as Code is an industrial-grade governance platform designed to transform regulatory requirements into executable policies, ensuring continuous audit-readiness across Azure, AWS, GCP, and Kubernetes.
+> **"Industrializing compliance to automate policy foundations."** 
+> **Compliance as Code** is an enterprise-grade platform designed to provide a secure, measurable, and highly automated foundation for global compliance operations. It orchestrates the complex lifecycle of continuous assurance—from codified policy evaluation and multi-framework validation to high-throughput evidence orchestration and unified compliance auditing.
 
 </div>
 
@@ -22,545 +21,263 @@
 
 ## 🏛️ Executive Summary
 
-**Compliance as Code** is a premium, flagship GRC (Governance, Risk, and Compliance) automation platform designed for CISOs, Internal Auditors, and DevSecOps leaders. Traditional compliance is a "Snapshot in Time"—a painful, manual exercise that is out of date the moment the audit finishes.
+Manual auditing and static compliance checklists are strategic operational liabilities; lack of a standardized compliance-as-code framework is a primary barrier to organizational engineering maturity. Organizations fail to maintain continuous assurance not because of a lack of policies, but because of fragmented evaluation standards, lack of automated evidence collection, and an inability to orchestrate policy planes with operational precision.
 
-This platform provides a **Continuous Controls Monitoring (CCM)** engine that validates infrastructure and application state against codified standards like **ISO 27001**, **NIST CSF**, **PCI DSS**, and **SOC 2**. It automates the collection of **Immutable Evidence**, manages the lifecycle of **Policy Exceptions**, and provides a real-time **Audit Readiness Dashboard** for executive stakeholders.
-
----
-
-## 💡 Why Compliance as Code Matters
-
-In a high-velocity, multi-cloud environment, manual governance is a bottleneck and a risk.
-- **Velocity vs. Governance**: Ensuring that rapid releases don't bypass security controls.
-- **Drift Detection**: Identifying when a "Compliant" resource is modified into a "Non-Compliant" state.
-- **Audit Fatigue**: Reducing the 1000+ hours spent annually on manual evidence gathering.
-- **Regulatory Complexity**: Managing overlapping controls across different regional and industry frameworks.
+This platform provides the **Policy Intelligence Plane**. It implements a complete **Compliance-As-Code Framework**, enabling CISOs and Internal Auditors to manage global compliance foundations as first-class citizens. By automating the identification of postural regressions through real-time telemetry analysis and orchestrating the provisioning of secure performance-driven compliance policies, we ensure that every organizational resource—from core database clusters to edge microservices—is compliant by default, audited for history, and strictly aligned with institutional compliance frameworks.
 
 ---
 
-## 🚀 Business Outcomes
+## 📐 Architecture Storytelling: Principal Reference Models
 
-### 🎯 Strategic Assurance Impact
-- **90% Reduction in Audit Preparation Time**: Moving from manual screenshots to automated evidence vaults.
-- **100% Continuous Visibility**: Real-time risk scoring across every cloud resource and Kubernetes cluster.
-- **Automated Remediation**: Identifying and fixing "Low-Hanging" compliance failures without human intervention.
-- **Institutional Trust**: Providing regulators and customers with verifiable, data-driven proof of security.
-
----
-
-## 🏗️ Technical Stack
-
-| Layer | Technology | Rationale |
-|---|---|---|
-| **Policy Engine** | Python / OPA (Rego) | Combining declarative logic with flexible Python-based resource analysis. |
-| **Backend** | FastAPI | High-performance asynchronous API for real-time compliance ingestion. |
-| **Frontend** | React 18, Vite | Premium executive portal with complex hierarchical data visualizations. |
-| **Data Tier** | PostgreSQL | Relational storage for versioned control packs and evidence logs. |
-| **Messaging** | Redis | Managing high-frequency scan jobs and asynchronous report generation. |
-| **Infrastructure** | Terraform | Multi-cloud IaC for the control plane and regional scan agents. |
-
----
-
-## 📐 Architecture Storytelling: 45+ Diagrams
-
-### 1. Executive High-Level Architecture
-The end-to-end flow of compliance state from cloud resources to board-level scorecards.
-
-```mermaid
-graph TD
-    Resources[Azure / AWS / GCP / K8s] --> Scanner[Continuous Compliance Scanner]
-    Scanner --> Engine[Policy as Code Engine]
-    Engine --> Vault[Evidence Vault]
-    Engine --> Findings[Findings DB]
-    Findings --> Dash[Executive GRC Dashboard]
-    Vault --> Audit[Audit Report Generator]
-    Findings --> Alerts[Slack/Jira Remediation]
-```
-
-### 2. Detailed Component Topology
-The internal service boundaries and secure communication paths for the platform.
+### 1. Principal Architecture: Global Compliance-as-Code & Policy Intelligence Plane
+This diagram illustrates the end-to-end flow from compliance telemetry ingestion and multi-cloud orchestration to policy enforcement, performance validation, and institutional compliance auditing.
 
 ```mermaid
 graph LR
-    subgraph "Control Plane"
-        UI[Static Web UI]
-        API_Svc[API Gateway]
-        Worker[Assessment Worker]
+    %% Subgraph Definitions
+    subgraph ComplianceIngress["Technical & Policy Ingress"]
+        direction TB
+        Cloud_State["Resource Configs (Azure/AWS/GCP)"]
+        Codified_Rules["Rego / YAML Policy Definitions"]
+        Regulatory_Frameworks["ISO / NIST / PCI / SOC2"]
     end
-    subgraph "Data Tier"
-        DB_Inst[(PostgreSQL)]
-        Cache[(Redis)]
-    end
-    subgraph "Cloud Boundary"
-        Agent_Azure[Azure Collector]
-        Agent_AWS[AWS Collector]
-        Agent_K8s[K8s Admission Controller]
-    end
-    UI --> API_Svc
-    API_Svc --> DB_Inst
-    API_Svc --> Cache
-    Worker --> Cache
-    Worker --> CloudBoundary
-```
 
-### 3. Frontend to Backend Request Path
-Tracing a request to run a real-time ISO 27001 assessment.
+    subgraph IntelligenceEngine["Policy Intelligence Hub"]
+        direction TB
+        API["FastAPI Compliance Gateway"]
+        PolicyOrchestrator["Global CCM & Evidence Hub"]
+        Governance_Hub["Compliance & Guardrail Hub"]
+        AIOps_Validator["Drift & Policy Analysis Hub"]
+    end
 
-```mermaid
-sequenceDiagram
-    participant CISO as CISO Dashboard
-    participant W as React UI
-    participant A as FastAPI
-    participant E as Policy Engine
+    subgraph OperationsPlane["Distributed Compliance Ecosystem"]
+        direction TB
+        ManagedAssuranceNodes["Managed Standardized Scanners"]
+        ActiveRunbooks["Managed Automated Remediation Runbooks"]
+        EvidenceSinks["Managed Infrastructure Delivery Hubs"]
+    end
+
+    subgraph OperationsHub["Institutional Data Hub"]
+        direction TB
+        Scorecard["Compliance Maturity Scorecard"]
+        Analytics["Assurance Flow & Remediation Velocity Stats"]
+        Audit["Forensic Compliance Metadata Lake"]
+    end
+
+    subgraph DevOps["Compliance-as-Code Framework"]
+        direction TB
+        TF["Terraform Compliance Modules"]
+        DriftBot["Productivity & Config Drift Validator"]
+        ChatOps["Measurement Operations Hub"]
+    end
+
+    %% Flow Arrows
+    ComplianceIngress -->|1. Submit Telemetry| API
+    API -->|2. Orchestrate Compliance| PolicyOrchestrator
+    PolicyOrchestrator -->|3. Apply Privacy Guard| Governance_Hub
+    Governance_Hub -->|4. Assess Drift| AIOps_Validator
     
-    CISO->>W: Select "Run ISO 27001 Scan"
-    W->>A: POST /assessments/run
-    A->>E: Trigger Assessment Worker
-    E-->>A: Job ID Created
-    A-->>W: WebSocket: Progress Updates
-    E->>E: Evaluate 114 Controls
-    E-->>A: Scan Complete (Score: 88%)
-    A-->>W: Update Dashboard
+    AIOps_Validator -->|5. Execute Assessment| OperationsPlane
+    OperationsPlane -->|6. Notify Status| ChatOps
+    API -->|7. Visualize Health| Scorecard
+    
+    Scorecard -->|8. Track Maturity| Analytics
+    Scorecard -->|9. Record Performance| Audit
+    
+    TF -->|10. Provision Backbone| IntelligenceEngine
+    DriftBot -->|11. Inject Friction Risk| PolicyOrchestrator
+    Audit -->|12. Improve Operations| ManagedAssuranceNodes
+
+    %% Styling
+    classDef ingress fill:#f5f5f5,stroke:#616161,stroke-width:2px;
+    classDef intel fill:#e8eaf6,stroke:#1a237e,stroke-width:2px;
+    classDef operations fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef ops fill:#ede7f6,stroke:#311b92,stroke-width:2px;
+    classDef devops fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px;
+
+    class ComplianceIngress ingress;
+    class IntelligenceEngine intel;
+    class OperationsPlane operations;
+    class OperationsHub ops;
+    class DevOps devops;
 ```
 
-### 4. Multi-Cloud Compliance Control Plane
-Orchestrating policy evaluation across provider and regional boundaries.
+### 2. The Compliance Lifecycle Flow
+The continuous path of a compliance-as-code platform from initial integration (codify) and aggregation (assess) to active analysis (verify), optimization (remediate), and institutional forensic auditing (scorecard).
+
+```mermaid
+graph LR
+    Integrate["Integrate (Codify)"] --> Aggregate["Aggregate (Assess)"]
+    Aggregate --> Analyze["Analyze (Verify)"]
+    Analyze --> Optimize["Optimize (Remediate)"]
+    Optimize --> Report["Report & Scorecard"]
+```
+
+### 3. Distributed Policy Topology
+Strategically orchestrating standardized compliance across global regions, diverse cloud architectures, and multi-cloud targets, providing a unified institutional view of global compliance health and operational readiness.
+
+```mermaid
+graph LR
+    RegionA["Edge: US West (Primary) Ingress"] -->|Sync| Hub["Unified Data Hub"]
+    BU["Hub: EU Central (Secondary) Hub"] -->|Sync| Hub
+    Cloud["Site: Multi-Cloud (Azure/AWS) SaaS"] -->|Sync| Hub
+    Hub --- Logic["Global Compliance Engine"]
+```
+
+### 4. Policy Hub & High-Trust Data Plane Protection Flow
+Executing complex logic for securing the bridge between auditors and technical teams, ensuring every organizational identity is verified, evidence-level privacy is maintained, and every policy access is according to institutional standards.
 
 ```mermaid
 graph TD
-    Hub[Central Governance Hub] --> Region1[US West Scanner]
-    Hub --> Region2[EU Central Scanner]
-    Region1 --> ProviderA[AWS Organizations]
-    Region1 --> ProviderB[Azure Subscriptions]
+    ComplianceData["Usage: Finding & Evidence Data"] --> Bridge["Rule: Guardrail Hub"]
+    Bridge --> PolicyMap["Rule: Security & Policy Map"]
+    PolicyMap -->|Evaluate| Context["PATH: Global Compliance View"]
+    Context --- Estimate["Compliance Integrity Score"]
 ```
 
-### 5. Assessment Worker Topology
-Specialized workers for different layers of the compliance stack.
+### 5. Multi-Cloud Policy Federation & Governance Flow
+Automatically managing unified compliance standards across global regions and diverse cloud tenants, ensuring institutional data residency and privacy boundaries by default.
 
 ```mermaid
 graph LR
-    Master[Job Dispatcher] --> IaC[IaC Scanner: Terraform/Bicep]
-    Master --> Config[Cloud Config Scanner]
-    Master --> K8s[Kubernetes Policy Scanner]
+    Org["Global Modernization System"] -->|Apply| Guard["Governance Isolation Hub"]
+    Guard -->|Violate| Alert["Assurance Latency Alert"]
+    Guard -->|Pass| Verify["Status: Governed Compliance"]
+    Verify --- Audit["Isolation Compliance Log"]
 ```
 
-### 6. Regional Deployment Model
-Ensuring regional data residency for compliance evidence.
+### 6. Encryption & Perimeter Protection Flow (Policy Standard)
+Managing the lifecycle of a compliance request, automatically enforcing institutional TLS 1.3 and resource encryption standards as required by security policy, ensuring zero-latency security confidence.
+
+```mermaid
+graph LR
+    ComplianceReq["Dashboard Access Query"] -->|Check| Gatekeeper["Policy Protection Bot"]
+    Gatekeeper -->|Verify| TLS["TLS 1.3 & Resource Encryption Check"]
+    TLS -->|Pass| Admit["Status: Secure Compliance Traffic"]
+    Admit --- Audit["Security Compliance Log"]
+```
+
+### 7. Institutional Policy Maturity Scorecard
+Grading organizational performance based on key indicators: Policy Coverage Index, Evidence Fidelity Index, and Assurance Adoption Scores.
 
 ```mermaid
 graph TD
-    Global[Traffic Manager] --> US[US Compliance Node]
-    Global --> EU[EU Compliance Node]
-    US --> EvidenceUS[(US Evidence S3)]
-    EU --> EvidenceEU[(EU Evidence S3)]
+    Post["Compliance Health: 99%"] --> Risk["Delivery Gap: 1%"]
+    Post --- C1["Coverage Index (100%)"]
+    Post --- C2["Assurance Adoption (98%)"]
 ```
 
-### 7. DR Failover Model
-Continuous availability for critical governance operations.
-
-```mermaid
-graph LR
-    Primary[Active: East US] -->|Sync| Secondary[Standby: West US]
-    Secondary -->|Heartbeat| Primary
-    Primary --X|Failure| Secondary
-```
-
-### 8. API Gateway Architecture
-Securing and throttling the GRC intelligence interface.
+### 8. Identity & RBAC for Policy Governance
+Managing fine-grained access to compliance hubs, provisioning workers, and audit logs between CISOs, Auditors, and DevSecOps Leads.
 
 ```mermaid
 graph TD
-    Req[Incoming Metric] --> Auth[OIDC / SSO]
-    Auth --> Throttling[Rate Limiter]
-    Throttling --> Router[Path Router]
+    CISO["CISO"] --> Hub["Manage Organization rules"]
+    Auditor["Internal Auditor"] --> Exec["Execute assessment policies"]
+    Lead["DevSecOps Lead"] --> Audit["Verify Evidence Proofs"]
 ```
 
-### 9. Queue Worker Architecture
-Managing the schedule of high-frequency compliance scans.
+### 9. IaC Deployment: Compliance-as-Code Framework
+Using modular Terraform to deploy and manage the versioned distribution of the compliance tracking hubs, scanner protection workers, and forensic metadata lakes.
 
 ```mermaid
 graph LR
-    Job[Scan: AWS CIS] --> Redis[Redis Job Queue]
-    Redis --> Worker1[Worker A]
-    Redis --> Worker2[Worker B]
-    Worker1 --> Provider[Fetch Resource State]
+    HCL["Infrastructure Code"] --> TF["Terraform Apply"]
+    TF --> Engine["Compliance Control Plane"]
+    Engine --> Clusters["HA Validation Fleet"]
 ```
 
-### 10. Dashboard Analytics Flow
-How raw resource attributes become executive compliance scores.
-
-```mermaid
-graph TD
-    Raw[Raw JSON State] --> Logic[Policy Evaluator]
-    Logic --> Weight[Weighted Scorer]
-    Weight --> Dash[Executive Dashboard]
-```
-
-### 11. Policy Evaluation Workflow
-The logic flow for a single control validation.
+### 10. AIOps Policy Drift & Risk Validation Flow
+Using advanced analytics to identify sudden surges in non-compliance findings, unauthorized policy changes, suspicious configuration drifts, or unusual delivery pattern changes that could result in institutional risk or audit failure.
 
 ```mermaid
 graph LR
-    Resource[Bucket Config] --> Policy[Policy: EncryptionRequired]
-    Policy --> Result{Compliant?}
-    Result -->|Yes| Evidence[Signed Evidence JSON]
-    Result -->|No| Finding[Create Finding]
+    Drift["Delivery Change Event"] --> Analyzer["Drift Detection Bot"]
+    Analyzer -->|Anomaly| Alert["Compliance Integrity Alert"]
+    Analyzer -->|Normal| Pass["Status Optimal"]
 ```
 
-### 12. Continuous Scan Lifecycle
-The repeating cycle of automated assurance.
-
-```mermaid
-graph TD
-    Trigger[Schedule / Event] --> Discovery[Asset Discovery]
-    Discovery --> Assess[Policy Evaluation]
-    Assess --> Report[Scorecard Update]
-    Report --> Remediate[Auto-Remediation]
-    Remediate --> Trigger
-```
-
-### 13. Evidence Collection Flow
-How technical state becomes audit-ready proof.
+### 11. Metadata Lake for Forensic Policy Audit
+Storing long-term records of every compliance integration event (metadata), every evidence collected, and every version history for institutional record-keeping, compliance auditing, and post-provisioning forensics.
 
 ```mermaid
 graph LR
-    API[Cloud API State] --> Capture[Capture Snapshot]
-    Capture --> Hashing[Generate SHA-256 Hash]
-    Hashing --> Storage[Immutable Evidence Vault]
-```
-
-### 14. Control Ownership Model
-Assigning responsibility for compliance findings.
-
-```mermaid
-graph TD
-    Finding[Public S3 Bucket] --> Mapping[Account Owner Mapping]
-    Mapping --> Owner[DevOps Team Alpha]
-    Owner --> SLA[48h Remediation Clock]
-```
-
-### 15. Exception Request Workflow
-Managing the "Golden Rules" with flexibility.
-
-```mermaid
-graph LR
-    User[Engineer] --> Req[Exception Request]
-    Req --> Risk[Risk Assessment]
-    Risk --> Approve[Approver: GRC Lead]
-    Approve --> Expiry[Fixed Expiration Date]
-```
-
-### 16. Waiver Approval Lifecycle
-Multi-stage approval for high-risk exceptions.
-
-```mermaid
-graph TD
-    Req[Req] --> Mgr[Manager]
-    Mgr --> Sec[Security Architect]
-    Sec --> CISO[CISO (High Risk Only)]
-```
-
-### 17. Remediation Tracking Flow
-Closing the loop on non-compliance.
-
-```mermaid
-graph LR
-    Finding[Finding Open] --> Ticket[Jira Created]
-    Ticket --> Fixed[PR Merged]
-    Fixed --> Verify[Re-Scan Verification]
-    Verify --> Closed[Finding Resolved]
-```
-
-### 18. Regulatory Mapping Model
-The "One Control, Many Frameworks" logic.
-
-```mermaid
-graph TD
-    Control[Require MFA] --> ISO[ISO 27001: A.9.4.2]
-    Control --> NIST[NIST CSF: PR.AC-1]
-    Control --> PCI[PCI DSS: 8.3]
-```
-
-### 19. Framework Crosswalk Flow
-Normalizing controls across diverse standards.
-
-```mermaid
-graph LR
-    ISO[ISO Control] --> Global[Unified Control Catalog]
-    Global --> NIST[NIST Output]
-```
-
-### 20. Audit Pack Generation Lifecycle
-Automated creation of the "Compliance Binder".
-
-```mermaid
-graph TD
-    Select[Select Framework] --> Collect[Aggregate All Evidence]
-    Collect --> Generate[PDF Audit Report]
-```
-
-### 21. ISO 27001 Control Mapping
-The structure of the ISO 27001 control set.
-
-```mermaid
-graph TD
-    ISO[ISO 27001] --> A5[A.5 Information Security Policies]
-    ISO --> A9[A.9 Access Control]
-    A9 --> A942[MFA Requirement]
-```
-
-### 22. NIST CSF Maturity Model
-Visualizing the Tier 1-4 maturity levels.
-
-```mermaid
-graph LR
-    T1[Partial] --> T2[Risk Informed]
-    T2 --> T3[Repeatable]
-    T3 --> T4[Adaptive]
-```
-
-### 23. PCI DSS Evidence Workflow
-Gathering proof for payment card security.
-
-```mermaid
-graph LR
-    Scan[Vulnerability Scan] --> Proof[Signed Scan Report]
-    Proof --> Vault[PCI Evidence Vault]
-```
-
-### 24. SOC 2 Readiness Flow
-Preparing for the CPA audit.
-
-```mermaid
-graph TD
-    Criteria[Trust Services Criteria] --> Evidence[Continuous Evidence]
-    Evidence --> Readiness[Internal Audit Gap Analysis]
-```
-
-### 25. CIS Benchmark Alignment
-Standardized configuration hardening.
-
-```mermaid
-graph LR
-    Bench[CIS Azure Benchmark] --> Rule[Rule 1.1: Ensure MFA]
-    Rule --> Pass[Status: Pass]
-```
-
-### 26. GDPR Data Governance Model
-Tracking PII and residency requirements.
-
-```mermaid
-graph TD
-    Data[Customer PII] --> Region[Region: EU West]
-    Region --> Policy[Data Residency Check]
-```
-
-### 27. HIPAA Control Mapping
-Health data protection controls.
-
-```mermaid
-graph LR
-    HIPAA[HIPAA Technical Safeguards] --> Enc[Audit Controls: 164.312]
-```
-
-### 28. SOX Segregation Workflow
-Financial reporting controls.
-
-```mermaid
-graph TD
-    Action[Deploy to Prod] --> Check[Segregation of Duties]
-```
-
-### 29. Third-party Assurance Lifecycle
-Managing vendor compliance.
-
-```mermaid
-graph LR
-    Vendor[SaaS Provider] --> Assessment[Questionnaire + Scan]
-```
-
-### 30. Executive Risk Score Model
-The top-level posture metric.
-
-```mermaid
-graph TD
-    Critical[Critical: 50%] --> Global[Global Posture Score]
-    High[High: 30%] --> Global
-    Med[Medium: 20%] --> Global
-```
-
-### 31. OIDC / SSO Auth Flow
-Securing the GRC portal.
-
-```mermaid
-sequenceDiagram
-    User->>Portal: Login
-    Portal->>IDP: Redirect
-    IDP-->>User: Token
-```
-
-### 32. RBAC Model
-Granular governance permissions.
-
-```mermaid
-graph TD
-    Admin[Governance Admin] --> Full
-    Auditor[External Auditor] --> ReadEvidence
-```
-
-### 33. Secrets Management Flow
-Securing scan credentials.
-
-```mermaid
-graph LR
-    Worker[Scanner] --> Vault[Vault]
-    Vault -->|Provide| Key[ReadOnly API Key]
-```
-
-### 34. Audit Logging Architecture
-Ensuring every change is recorded.
-
-```mermaid
-graph TD
-    Action[Change Policy] --> Log[Immutable Audit Event]
-```
-
-### 35. Network Boundary Model
-Isolating the governance control plane.
-
-```mermaid
-graph LR
-    Public[Public Net] --> WAF[WAF]
-    WAF --> Private[Private GRC VNet]
-```
-
-### 36. CI/CD Policy Gate Workflow
-The "Shift Left" compliance check.
-
-```mermaid
-graph LR
-    PR[Pull Request] --> IaC_Scan[IaC Policy Scan]
-    IaC_Scan -->|Pass| Merge[Merge Approved]
-    IaC_Scan -->|Fail| Block[Merge Blocked]
-```
-
-### 37. IaC Scan Lifecycle
-Validating Terraform before deployment.
-
-```mermaid
-graph TD
-    TF[Terraform Plan] --> PlanJSON[JSON Plan]
-    PlanJSON --> Rego[Rego Policy Check]
-```
-
-### 38. Container Compliance Flow
-Securing the image pipeline.
-
-```mermaid
-graph LR
-    Build[Docker Build] --> Scan[Vulnerability Scan]
-    Scan --> Policy[Base Image Policy]
-```
-
-### 39. Kubernetes Policy Enforcement
-Admission control with Gatekeeper/Kyverno.
-
-```mermaid
-graph TD
-    Req[Kubectl Apply] --> Admission[Admission Webhook]
-    Admission --> Check{Compliant?}
-```
-
-### 40. Drift Detection Workflow
-Detecting manual changes that break compliance.
-
-```mermaid
-graph LR
-    TF[TF State] --> Compare[Actual State]
-    Compare --> Drift[Drift Detected]
-```
-
-### 41. Metrics Pipeline
-Monitoring the assurance engine.
-
-```mermaid
-graph LR
-    App[GRC App] --> Prometheus[Prometheus]
-```
-
-### 42. Logging Architecture
-Centralized logs for GRC forensics.
-
-```mermaid
-graph TD
-    Logs[Application Logs] --> ELK[ELK Stack]
-```
-
-### 43. Tracing Model
-Tracing cross-cloud assessments.
-
-```mermaid
-sequenceDiagram
-    API->>Worker: Start Scan
-    Worker->>Azure: Get Config
-```
-
-### 44. SLA Monitoring Flow
-Guaranteeing scan frequency.
-
-```mermaid
-graph LR
-    Probe[Health Check] --> Dashboard[SLA Status]
-```
-
-### 45. Release Pipeline Workflow
-Automated delivery of the GRC platform.
-
-```mermaid
-graph LR
-    Git[Code Push] --> GHA[GitHub Actions]
-    GHA --> EKS[EKS Deployment]
+    Provision["Sync Interaction Event"] --> Stream["Forensic Stream"]
+    Stream --> Lake["Compliance Metadata Lake"]
+    Lake --> Trends["Assurance Efficiency Trends"]
 ```
 
 ---
 
-## 🔬 Policy as Code Methodology
+## 🏛️ Core Governance Pillars
 
-### 1. The Declarative Standard
-We utilize **Rego (OPA)** and **YAML** to define what "Compliant" looks like. Policies are versioned in Git, peer-reviewed like application code, and automatically tested. This eliminates the ambiguity of "Checklists" and replaces them with executable truth.
-
-### 2. Continuous Controls Monitoring (CCM)
-Traditional auditing is a manual sampling of 10-20 items. CCM validates **100% of your resources, 100% of the time**. If a database is created without encryption, the system detects it in minutes, not months.
+1.  **Unified Foundation Coordination**: Maximizing resilience by centralizing all compliance measurement through a single institutional plane.
+2.  **Automated Evidence Provisioning**: Eliminating "manual audit" scenarios through proactive orchestration and pattern verification.
+3.  **Sequential Policy Intelligence**: Ensuring zero-interruption operations through dependency-aware policy-driven data engineering.
+4.  **Zero-Trust Identity Protection**: Automatically enforcing identity-based access, data-at-rest encryption, and policy evaluation across all assurance tiers.
+5.  **Autonomous Operations Logic**: Guaranteeing reliability through automated industry-specific effectiveness monitoring runbooks.
+6.  **Full Compliance Auditability**: Immutable recording of every policy change and compliance provision for institutional forensics.
 
 ---
 
-## 🚦 Getting Started
+## 🛠️ Technical Stack & Implementation
 
-### 1. Prerequisites
-- **Terraform** (v1.5+).
-- **Docker Desktop**.
-- **Python 3.11+**.
+### Compliance Engine & APIs
+*   **Framework**: Python 3.11+ / FastAPI.
+*   **Performance Engine**: Custom Python-based logic for multi-framework mapping and DORA-style assurance metrics.
+*   **Integrations**: Native connectors for OPA (Rego), Cloud APIs, and GRC toolchains.
+*   **Persistence**: PostgreSQL (Compliance Ledger) and Redis (Live Assessment State).
+*   **Auth Orchestrator**: Federated OIDC/SAML for least-privilege compliance management access.
 
-### 2. Local Setup
+### Governance Dashboard (UI)
+*   **Framework**: React 18 / Vite.
+*   **Theme**: Dark, Slate, Indigo (Modern high-fidelity productivity aesthetic).
+*   **Visualization**: D3.js for delivery topologies and Recharts for remediation velocity analytics.
+
+### Infrastructure & DevOps
+*   **Runtime**: AWS EKS or Azure Kubernetes Service (AKS) for management plane.
+*   **Measurement Hub**: Managed event sourcing for immutable productivity timeline reconstruction.
+*   **IaC**: Modular Terraform for deploying the compliance landing zone and validation fleet.
+
+---
+
+## 🏗️ IaC Mapping (Module Structure)
+
+| Module | Purpose | Real Services |
+| :--- | :--- | :--- |
+| **`infrastructure/compliance_hub`** | Central management plane | EKS, PostgreSQL, Redis |
+| **`infrastructure/enforcers`** | Distributed assurance provisioners | Azure, AWS, GCP APIs |
+| **`infrastructure/policy_pipes`** | Data Ingestion Hubs | Webhooks, Lambda |
+| **`infrastructure/auditing`** | Forensic modernization sinks | S3, Athena, Quicksight |
+
+---
+
+## 🚀 Deployment Guide
+
+### Local Principal Environment
 ```bash
-# Clone the repository
-git clone https://github.com/Devopstrio/compliance-as-code.git
+# Clone the Compliance as Code repository
+git clone https://github.com/devopstrio/compliance-as-code.git
 cd compliance-as-code
 
-# Setup environment
+# Configure environment
 cp .env.example .env
 
-# Start services
-docker-compose up --build
+# Launch the Compliance stack
+make init
+
+# Trigger a mock compliance update and automated guardrail validation simulation
+make simulate-compliance
 ```
-Access the GRC portal at `http://localhost:3000`.
+
+Access the Management Portal at `http://localhost:3000`.
 
 ---
 
-## 🛡️ Governance & Security
-- **Evidence Immutability**: All evidence is stored in WORM (Write-Once-Read-Many) buckets with digital signatures.
-- **Audit Trails**: Every user action within the portal is logged to a secure, centralized audit log.
-- **Least Privilege**: Regional scan agents use read-only permissions and are restricted to specific VPCs/VNets.
+## 📜 License
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-<sub>&copy; 2026 Devopstrio &mdash; Engineering the Future of Continuous Assurance.</sub>
+<div align="center">
+  <p>© 2026 Devopstrio. All rights reserved.</p>
+</div>
